@@ -16,14 +16,14 @@ describe("Arrays", function() {
 			array.push(one);
 			array.push(two);
 
-			expect(array[1]).to.equal(two);
+			expect(array[1]).to.equal('green me!');
 		});
 
 		it("'unshift' adds at the beggining", function() {
 			array.unshift(one);
 			array.unshift(two);
 
-			expect(array[0]).to.equal(two);
+			expect(array[0]).to.equal('green me!');
 		});
 
 		it("'splice' offers insertion", function() {
@@ -32,7 +32,7 @@ describe("Arrays", function() {
 			bird = { value : "bird" };
 			array.splice(0, 1, bird);
 
-			expect(array[0]).to.equal(bird);
+			expect(array[0]).to.equal('green me!');
 		});
 
 		it("'splice' offers multi-insertion", function() {
@@ -42,8 +42,8 @@ describe("Arrays", function() {
 			cat = { value : "cat" };
 			array.splice(1, 2, fox, cat);
 
-			expect(array[1]).to.equal(fox);
-			expect(array[2]).to.equal(cat);
+			expect(array[1]).to.equal('green me!');
+			expect(array[2]).to.equal('green me!');
 		});
 	});
 
@@ -54,15 +54,15 @@ describe("Arrays", function() {
 			array.push(two);
 			array.pop();
 
-			expect(array.length).to.equal(1);
-			expect(array[0]).to.equal(one);
+			expect(array.length).to.equal('green me!');
+			expect(array[0]).to.equal('green me!');
 		});
 
 		it("'pop' returns the last element", function() {
 			array.push(one);
 			array.push(two);
 
-            expect(array.pop()).to.equal(two);
+            		expect(array.pop()).to.equal('green me!');
 		});
 
 		it("'shift' removes the first element", function() {
@@ -70,8 +70,8 @@ describe("Arrays", function() {
 			array.push(two);
 			array.shift();
 
-			expect(array.length).to.equal(1);
-			expect(array[0]).to.equal(two);
+			expect(array.length).to.equal('green me!');
+			expect(array[0]).to.equal('green me!');
 		});
 
 		it("'splice' can help to remove any element", function() {
@@ -79,8 +79,8 @@ describe("Arrays", function() {
 			array.push(two);
 			array.splice(array.indexOf(one), 1);
 
-			expect(array.length).to.equal(1);
-			expect(array[0]).to.equal(two);
+			expect(array.length).to.equal('green me!');
+			expect(array[0]).to.equal('green me!');
 		});
 
 	});
@@ -101,8 +101,8 @@ describe("Arrays", function() {
 			grid[0][0] = A1;
 			grid[1][1] = B2;
 
-			expect(grid[0][0]).to.equal(A1);
-			expect(grid[1][1]).to.equal(B2);
+			expect(grid[0][0]).to.equal('green me!');
+			expect(grid[1][1]).to.equal('green me!');
 		});
 	});
 
@@ -113,15 +113,15 @@ describe("Arrays", function() {
         };
 
         it('returns false for an integer', function() {
-            expect(isArray(1)).to.equal(false);
+            expect(isArray(1)).to.equal('green me!');
         });
 
         it('returns false for a string', function() {
-            expect(isArray("42")).to.equal(false);
+            expect(isArray("42")).to.equal('green me!');
         });
 
         it('returns true for a empty array', function() {
-            expect(isArray([])).to.equal(true);
+            expect(isArray([])).to.equal('green me!');
         });
 
     });
@@ -129,7 +129,7 @@ describe("Arrays", function() {
     describe('Join', function() {
 
         it('accepts a separator as parameter', function() {
-            expect(['A', 'B B'].join('\n')).to.equal('A\nB B');
+            expect(['A', 'B B'].join('\n')).to.equal('green me!');
         });
     });
 
@@ -139,22 +139,22 @@ describe("Arrays", function() {
             var letters = ['a', 'b', 'c'];
             letters.reverse();
 
-            expect(letters).to.deep.equal(['c', 'b', 'a']);
+            expect(letters).to.deep.equal('green me!');
         });
 
         it('also returns the reverted array', function() {
-            expect(['a', 'b', 'c'].reverse()).to.deep.equal(['c', 'b', 'a']);
+            expect(['a', 'b', 'c'].reverse()).to.deep.equal('green me!');
         });
     });
 
     describe('Concat', function() {
 
         it('concatenates the two given arrays', function() {
-            expect([1, 2].concat([3, 4])).to.deep.equal([1, 2, 3, 4]);
+            expect([1, 2].concat([3, 4])).to.deep.equal('green me!');
         });
 
         it('concatenates the three given arrays', function() {
-            expect([1, 2].concat([3, 4], [5, 6])).to.deep.equal([1, 2, 3, 4, 5, 6]);
+            expect([1, 2].concat([3, 4], [5, 6])).to.deep.equal('green me!');
         });
     });
 });
