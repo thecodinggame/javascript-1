@@ -4,6 +4,7 @@
   "devDependencies": {
     "chai": "^3.3.0",
     "chai-string": "^1.2.0",
+    "deep-equal": "latest",
     "mocha": "^2.3.3",
     "sinon": "^1.17.1",
     "sinon-chai": "^2.8.0"
